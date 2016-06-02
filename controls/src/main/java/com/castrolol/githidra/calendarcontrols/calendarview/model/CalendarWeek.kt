@@ -16,7 +16,7 @@ data class CalendarWeek(val weekNumber: Int, val month: Int, val year: Int){
         var week = firstDay.weekOfWeekyear().addToCopy(weekNumber - 1).dayOfWeek().withMinimumValue()
 
         for(i in 1..7){
-            dayList.add(CalendarDay(year, month, week.dayOfMonth));
+            dayList.add(CalendarDay(week.year, week.monthOfYear, week.dayOfMonth));
             week = week.plusDays(1)
         }
 

@@ -15,7 +15,7 @@ open class CalendarView : LinearLayout {
 
     private var _month = DateTime.now().monthOfYear
     private var _year = DateTime.now().year;
-    private var _model = CalendarMonth(_year, _month)
+    private var _model = CalendarMonth(_month, _year)
 
     constructor(context: Context) : super(context) {
         this.orientation = VERTICAL
@@ -48,7 +48,7 @@ open class CalendarView : LinearLayout {
         }
 
     private fun updateView() {
-        _model = CalendarMonth(_year, _month)
+        _model = CalendarMonth(_month,_year)
 
         removeAllViews()
 

@@ -14,11 +14,16 @@ data class CalendarMonth(val month: Int, val year: Int){
 
 
         val list = mutableListOf<CalendarWeek>()
-        val firstDay = DateTime(year, month, 1, 0, 0, 0)
-        val numberOfWeeks = Weeks.weeksBetween(firstDay, firstDay.plusMonths(1).minusDays(1)).weeks;
+        var monthDay = DateTime(year, month, 1, 0, 0, 0)
+        var numberOfWeeks = 1
+        list.add(CalendarWeek(1, month, year))
 
-        for(i in 1..numberOfWeeks){
-            list.add(CalendarWeek(i, month, year))
+        for(i in 1 .. (monthDay .dayOfMonth().maximumValue)){
+            if(i != 1 && monthDay.dayOfWeek == monthDay.dayOfWeek().minimumValue){
+                numberOfWeeks++;
+                list.add(CalendarWeek(numberOfWeeks, month, year))
+            }
+            monthDay = monthDay.plusDays(1)
         }
 
         return@lazy list.toList()
