@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CalendarControls.iml" filepath="$PROJECT_DIR$/CalendarControls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-calendar-view.iml" filepath="$PROJECT_DIR$/android-calendar-view.iml" />
       <module fileurl="file://$PROJECT_DIR$/controls/controls.iml" filepath="$PROJECT_DIR$/controls/controls.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
     </modules>
